@@ -11,3 +11,8 @@ con.connect()
 .then(()=>console.log("conexion exitosa"))
 .catch((err)=>console.log(err))
 
+con.query("SET search_path TO ric",(err,rest)=>{
+    if(err)console.log(err)
+    console.log(rest)
+}
+)

@@ -1,9 +1,11 @@
-import {con} from "./db/conn";
+import Login from '@/app/db/querys'
 export default async function Indexpage(){
-  const conexion= con
+  
   return(
+    
     <div>
-      <h1>Index</h1>
+      <h1>{JSON.stringify(await Login())}</h1>
     </div>
   )
+
 }
