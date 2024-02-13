@@ -8,6 +8,18 @@ export default async function login(){
         })
     })
     const arrayUsuarios = JSON.parse(await usuarios)
-    return arrayUsuarios[0]
+
+    arrayUsuarios.forEach(usuario => {
+        const email = usuario.email;
+        const contraseña = usuario.contrasenia;
+
+        // Hacer lo que necesites con el email y la contraseña
+        console.log("Email:", email);
+        console.log("Contraseña:", contraseña);
+
+        
+    });
     
+    return arrayUsuarios[0]
+
 }
